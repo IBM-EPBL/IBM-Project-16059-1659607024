@@ -1,0 +1,22 @@
+'''Temperature and Humidity is generated Random values,if it is above the assigned temperature
+and Humidity then an alarm is set to detect and gives message as high temperature and Hazard is detected'''
+
+
+import random
+import time
+
+while(1):
+    time.sleep(2) #2 seconds delay
+    temp= random.randrange(0,100)
+    hum= random.randrange(0,100)
+    
+    print("Temperature =",temp)
+    print("Humidity =",hum)
+    
+    if(temp>35 or hum>50):
+        if(temp>35 and hum>50): #Detection of High Temperature and High Humidity
+            print("HIGH ALERT!!!!!")
+        elif(hum>50 and temp<35): #Detection of High Humidity
+            print("HAZARD")
+        else: #Detection of High Temperature
+            print("High temperature is Detected")
